@@ -3,14 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <title>My Image Gallery</title>
+    <style>
+      .image-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 10px; /* spacing between images */
+        flex-wrap: wrap; /* allows wrapping on small screens */
+        align-items: flex-start;
+      }
+
+      .image-list li {
+        display: inline-block;
+      }
+
+      .image-list img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
   <body>
     <h1>My Sample Image Gallery</h1>
 
     <h2>Example Images from the Web</h2>
-    <img src="https://via.placeholder.com/300" alt="Sample Image 1" />
-    <img src="https://via.placeholder.com/400x200" alt="Sample Image 2" />
-    <img src="https://via.placeholder.com/150" alt="Sample Image 3" />
+    <ul class="image-list">
+      <li><img src="https://via.placeholder.com/300" alt="Sample Image 1" /></li>
+      <li><img src="https://via.placeholder.com/400x200" alt="Sample Image 2" /></li>
+      <li><img src="https://via.placeholder.com/150" alt="Sample Image 3" /></li>
+    </ul>
 
     <p>
       Replace these links with your own uploaded images from GitHub in Part 2.
